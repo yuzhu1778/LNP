@@ -1,0 +1,7 @@
+file = loadmol2 etest.mol2
+
+
+
+loadAmberParams frcmod.lnp
+saveamberparm file etest.prmtop etest.inpcrd
+quit 

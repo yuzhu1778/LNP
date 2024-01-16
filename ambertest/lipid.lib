@@ -1,0 +1,101 @@
+!!index array str
+ "GLP"
+ "GCA"
+!entry.GLP.unit.atoms table  str name  str type  int typex  int resx  int flags  int seq  int elmnt  dbl chg
+ "TO2"  "LC" 0 1 131072  1 -1  0.6
+ "TO1"  "LB" 0 1 131072  2 -1 -0.6
+ "HO1"  "LA" 0 1 131072  3 -1  0.4
+!entry.GLP.unit.atomspertinfo table  str pname  str ptype  int ptypex  int pelmnt  dbl pchg
+ "TO2"  "LC" 0 -1 0.0
+ "TO1"  "LB" 0 -1 0.0
+ "HO1"  "LA" 0 -1 0.0
+!entry.GLP.unit.boundbox array dbl
+ -1.000000
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+!entry.GLP.unit.childsequence single int
+ 1
+!entry.GLP.unit.connect array int
+ 0
+ 0
+!entry.GLP.unit.connectivity table  int atom1x  int atom2x  int flags
+  1  2  1
+  2  3  1
+!entry.GLP.unit.hierarchy table  str abovetype  int abovex  str belowtype  int belowx
+ "U" 0 "R"  1
+ "R" 1 "A"  1
+ "R" 1 "A"  2
+ "R" 1 "A"  3
+!entry.GLP.unit.name single str
+ "GLP"
+!entry.GLP.unit.positions table  dbl x  dbl y  dbl z
+  5.658  11.210  56.804
+  5.595  16.103  55.150
+  5.452  15.453  51.372
+!entry.GLP.unit.residueconnect table  int c1x  int c2x  int c3x  int c4x  int c5x  int c6x
+ 0 0 0 0 0 0
+!entry.GLP.unit.residues table  str name  int seq  int childseq  int startatomx  str restype  int imagingx
+ "GLP" 1 14 1 "?" 0
+!entry.GLP.unit.residuesPdbSequenceNumber array int
+ 0
+!entry.GLP.unit.solventcap array dbl
+ -1.000000
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+!entry.GLP.unit.velocities table  dbl x  dbl y  dbl z
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+!entry.GCA.unit.atoms table  str name  str type  int typex  int resx  int flags  int seq  int elmnt  dbl chg
+ "TC2"  "CC" 0 1 131072  1 -1  0.6
+ "TC1"  "CB" 0 1 131072  2 -1 -0.6
+ "HC1"  "CA" 0 1 131072  3 -1  0.4
+!entry.GCA.unit.atomspertinfo table  str pname  str ptype  int ptypex  int pelmnt  dbl pchg
+ "TC2"  "CC" 0 -1 0.0
+ "TC1"  "CB" 0 -1 0.0
+ "HC1"  "CA" 0 -1 0.0
+!entry.GCA.unit.boundbox array dbl
+ -1.000000
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+!entry.GCA.unit.childsequence single int
+ 2
+!entry.GCA.unit.connect array int
+ 0
+ 0
+!entry.GCA.unit.connectivity table  int atom1x  int atom2x  int flags
+  1  2  1
+  2  3  1
+!entry.GCA.unit.hierarchy table  str abovetype  int abovex  str belowtype  int belowx
+ "U" 0 "R"  1
+ "R" 1 "A"  1
+ "R" 1 "A"  2
+ "R" 1 "A"  3
+!entry.GCA.unit.name single str
+ "GCA"
+!entry.GCA.unit.positions table  dbl x  dbl y  dbl z
+  5.658  11.210  56.804
+  5.595  16.103  55.150
+  5.452  15.453  51.372
+!entry.GCA.unit.residueconnect table  int c1x  int c2x  int c3x  int c4x  int c5x  int c6x
+ 0 0 0 0 0 0
+!entry.GCA.unit.residues table  str name  int seq  int childseq  int startatomx  str restype  int imagingx
+ "GCA" 1 14 1 "?" 0
+!entry.GCA.unit.residuesPdbSequenceNumber array int
+ 0
+!entry.GCA.unit.solventcap array dbl
+ -1.000000
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+!entry.GCA.unit.velocities table  dbl x  dbl y  dbl z
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0

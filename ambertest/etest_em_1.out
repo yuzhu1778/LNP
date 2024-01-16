@@ -1,0 +1,179 @@
+
+          -------------------------------------------------------
+          Amber 22 PMEMD                              2022
+          -------------------------------------------------------
+
+| PMEMD implementation of SANDER, Release 22
+
+|  Compiled date/time: Thu Apr 14 14:06:37 2022
+| Run on 01/14/2024 at 19:54:41
+
+|   Executable path: pmemd
+| Working directory: /home/yu/Desktop/LNP/test
+|          Hostname: Unknown
+  [-O]verwriting output
+
+File Assignments:
+|   MDIN: ./em2_Prot-Lip.in                                                     
+|  MDOUT: etest_em_1.out                                                        
+| INPCRD: ./resize_etest.ncrst                                                  
+|   PARM: ./etest.prmtop                                                        
+| RESTRT: etest_em_1.ncrst                                                      
+|   REFC: refc                                                                  
+|  MDVEL: mdvel                                                                 
+|   MDEN: mden                                                                  
+|  MDCRD: mdcrd                                                                 
+| MDINFO: mdinfo                                                                
+|  MDFRC: mdfrc                                                                 
+
+
+ Here is the input file:
+
+Minimization (full system)                                                     
+ &cntrl                                                                        
+  imin = 1,                ! Minimize the initial structure                    
+  maxcyc = 5000,           ! Maximum number of cycles for minimization         
+  ncyc = 100,              ! Switch from steepest descent to conjugate gradient
+                                                                               
+  ntb = 1,                 ! Constant volume                                   
+  ntp = 0,                 ! No pressure scaling                               
+  ntpr = 50,               ! Print to mdout every ntpr steps                   
+  cut = 12,                ! Nonbonded cutoff in Angstroms                     
+  ntxo = 2,                ! Write binary restart files                        
+ /                                                                             
+ &ewald                                                                        
+  chngmask=0,              ! Only required to avoid SANDER error               
+ /                                                                             
+
+
+Note: ig = -1. Setting random seed to    87925 based on wallclock time in 
+      microseconds.
+| irandom = 1, using AMBER's internal random number generator (default).
+ 
+ 
+| Conditional Compilation Defines Used:
+| PUBFFT
+| BINTRAJ
+| EMIL
+
+| Largest sphere to fit in unit cell has radius =   200.000
+
+| New format PARM file being parsed.
+| Version =    1.000 Date = 01/14/24 Time = 19:40:30
+
+| Note: 1-4 EEL scale factors are being read from the topology file.
+
+| Note: 1-4 VDW scale factors are being read from the topology file.
+| Duplicated    0 dihedrals
+
+| Duplicated    0 dihedrals
+
+--------------------------------------------------------------------------------
+   1.  RESOURCE   USE: 
+--------------------------------------------------------------------------------
+
+ getting box info from netcdf restart file
+ NATOM  =   15508 NTYPES =       1 NBONH =       0 MBONA  =    7672
+ NTHETH =       0 MTHETA =    3836 NPHIH =       0 MPHIA  =       0
+ NHPARM =       0 NPARM  =       0 NNB   =   19344 NRES   =    7836
+ NBONA  =    7672 NTHETA =    3836 NPHIA =       0 NUMBND =       4
+ NUMANG =       2 NPTRA  =       0 NATYP =       7 NPHB   =       0
+ IFBOX  =       1 NMXRS  =       3 IFCAP =       0 NEXTRA =       0
+ NCOPY  =       0
+
+| Coordinate Index Table dimensions:    61   61   61
+| Direct force subcell size =     6.5574    6.5574    6.5574
+
+     BOX TYPE: RECTILINEAR
+
+--------------------------------------------------------------------------------
+   2.  CONTROL  DATA  FOR  THE  RUN
+--------------------------------------------------------------------------------
+
+default_name                                                                    
+
+General flags:
+     imin    =       1, nmropt  =       0
+
+Nature and format of input:
+     ntx     =       1, irest   =       0, ntrx    =       1
+
+Nature and format of output:
+     ntxo    =       2, ntpr    =      50, ntrx    =       1, ntwr    =       1
+     iwrap   =       0, ntwx    =       0, ntwv    =       0, ntwe    =       0
+     ioutfm  =       1, ntwprt  =       0, idecomp =       0, rbornstat=      0
+
+Potential function:
+     ntf     =       1, ntb     =       1, igb     =       0, nsnb    =      25
+     ipol    =       0, gbsa    =       0, iesp    =       0
+     dielc   =   1.00000, cut     =  12.00000, intdiel =   1.00000
+
+Frozen or restrained atoms:
+     ibelly  =       0, ntr     =       0
+
+Energy minimization:
+     maxcyc  =    5000, ncyc    =     100, ntmin   =       1
+     dx0     =   0.01000, drms    =   0.00010
+
+| Intermolecular bonds treatment:
+|     no_intermolecular_bonds =       1
+
+| Energy averages sample interval:
+|     ene_avg_sampling =       1
+
+Ewald parameters:
+     verbose =       0, ew_type =       0, nbflag  =       1, use_pme =       1
+     vdwmeth =       1, eedmeth =       1, netfrc  =       0
+     Box X =  400.000   Box Y =  400.000   Box Z =  400.000
+     Alpha =   90.000   Beta  =   90.000   Gamma =   90.000
+     NFFT1 =  400       NFFT2 =  400       NFFT3 =  400
+     Cutoff=   12.000   Tol   =0.100E-04
+     Ewald Coefficient =  0.22664
+     Interpolation order =    4
+
+--------------------------------------------------------------------------------
+   3.  ATOMIC COORDINATES AND VELOCITIES
+--------------------------------------------------------------------------------
+
+Cpptraj Generated Restart                                                       
+ begin time read from input coords =     0.000 ps
+
+ 
+ Number of triangulated 3-point waters found:        0
+
+     Sum of charges from parm topology file = ************
+     Assuming uniform neutralizing plasma
+
+| Dynamic Memory, Types Used:
+| Reals              511395
+| Integers           367375
+
+| Nonbonded Pairs Initial Allocation:     7712516
+
+--------------------------------------------------------------------------------
+   4.  RESULTS
+--------------------------------------------------------------------------------
+
+ ---------------------------------------------------
+ APPROXIMATING switch and d/dx switch using CUBIC SPLINE INTERPOLATION
+ using   5000.0 points per unit in tabled values
+ TESTING RELATIVE ERROR over r ranging from 0.0 to cutoff
+| CHECK switch(x): max rel err =   0.2738E-14   at   2.422500
+| CHECK d/dx switch(x): max rel err =   0.7967E-11   at   2.716640
+ ---------------------------------------------------
+|---------------------------------------------------
+| APPROXIMATING direct energy using CUBIC SPLINE INTERPOLATION
+|  with   50.0 points per unit in tabled values
+| Relative Error Limit not exceeded for r .gt.   2.27
+| APPROXIMATING direct force using CUBIC SPLINE INTERPOLATION
+|  with   50.0 points per unit in tabled values
+| Relative Error Limit not exceeded for r .gt.   2.78
+|---------------------------------------------------
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+      1       8.6751+259       Infinity     7.3664+259     TO2      3985
+
+ BOND    =  6904787.8398  ANGLE   =      767.3741  DIHED      =        0.0000
+ VDWAALS = *************  EEL     = *************  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000

@@ -1,0 +1,67 @@
+
+          -------------------------------------------------------
+          Amber 22 PMEMD                              2022
+          -------------------------------------------------------
+
+| PMEMD implementation of SANDER, Release 22
+
+|  Compiled date/time: Thu Apr 14 14:06:37 2022
+| Run on 01/14/2024 at 20:06:57
+
+|   Executable path: pmemd
+| Working directory: /home/yu/Desktop/LNP/test
+|          Hostname: Unknown
+  [-O]verwriting output
+
+File Assignments:
+|   MDIN: ./eq_Prot-Lip.in                                                      
+|  MDOUT: etest.out                                                             
+| INPCRD: resize_etest.ncrst                                                    
+|   PARM: ./etest.prmtop                                                        
+| RESTRT: etest_em.ncrst                                                        
+|   REFC: refc                                                                  
+|  MDVEL: mdvel                                                                 
+|   MDEN: mden                                                                  
+|  MDCRD: etest_eq_1.nc                                                         
+| MDINFO: mdinfo                                                                
+|  MDFRC: mdfrc                                                                 
+
+
+ Here is the input file:
+
+Protein-Lipid equilibration 310K                                               
+ &cntrl                                                                        
+  imin=0,                  ! Molecular Dynamics                                
+  ntx=5,                   ! Positions and velocities read formatted           
+  irest=1,                 ! Restart calculation                               
+  nstlim=25000,            ! Number of MD steps                                
+  ntpr=100,                ! Print to mdout every ntpr steps                   
+  ntwr=10000,              ! Write a restart file every ntwr steps             
+  ntwx=100,                ! Write to trajectory file every ntwx steps         
+  dt=0.020,                ! Timestep (ps)                                     
+  ntp=3,                   ! Semiisotropic coupling                            
+  csurften=3,              ! Interfaces in xy plane                            
+  gamma_ten=0.0,           ! Surface tension (dyne/cm)                         
+  taup=8.0,                ! Pressure relaxation time (ps)                     
+  cut=12.0,                ! Nonbonded cutoff in Angstroms                     
+  ioutfm=1,                ! Write binary NetCDF trajectory                    
+  ntxo=2,                  ! Write binary restart file                         
+  ntt = 3,                 ! Langevin thermostat                               
+  gamma_ln = 5.0,          ! Collision frequency for thermostat                
+  ig = -1,                 ! Random seed for Langevin thermostat               
+  temp0= 310.0,            ! Simulation temperature (K)                        
+  ntr = 1,                 ! Restrain atoms using a harmonic potential         
+  restraint_wt=0.24,       ! 0.24 kcal/mol/A**2 restraint force constant       
+  restraintmask='@GN,GO',  ! Restraints over N and O backbone beads            
+ /                                                                             
+ &ewald                                                                        
+  skinnb=5,                ! Increase skinnb to avoid skinnb errors in GPU code
+  chngmask=0,              ! Only required to avoid SANDER error               
+ /                                                                             
+
+
+Note: ig = -1. Setting random seed to   861705 based on wallclock time in 
+      microseconds.
+| irandom = 1, using AMBER's internal random number generator (default).
+ 
+| ERROR:   I could not find enough velocities in resize_etest.ncrst                                                                                                                                                                                                                                              

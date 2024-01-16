@@ -1,0 +1,11 @@
+# Set reference coordinate file
+reference etest.ncrst
+# New box dimensions
+box x 400 y 400 z 400
+
+# Amber NetCDF Restart generation
+trajout resize_etest.ncrst
+# Do it!
+go
+# Exit
+quit

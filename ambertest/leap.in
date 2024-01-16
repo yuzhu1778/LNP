@@ -1,0 +1,15 @@
+
+source leaprc.LNP
+
+file = loadpdb stest.pdb
+
+set file box {400,400,400}
+
+#savemol2 file etest.mol2 0
+savepdb file etest.pdb
+
+#loadAmberParams frcmod.lnp
+#saveamberparm file etest.prmtop etest.inpcrd
+
+saveAmberParmNetcdf file etest.prmtop etest.ncrst 
+quit 

@@ -1,0 +1,24 @@
+logFile leap.log
+
+
+# LNP atom types
+  addAtomTypes {
+# Lipid ----------------------------
+               { "LA"  "V" "sp3" }
+               { "LB"  "V" "sp3" }
+               { "LC"  "V" "sp3" }
+               { "CA"  "V" "sp3" }
+               { "CB"  "V" "sp3" }
+               { "CC"  "V" "sp3" }
+
+# FAT ------------------------------
+               { "OL"  "V" "sp3" }
+  }
+
+# Load LNP parameters
+  loadAmberParams frcmod.lnp
+
+# Load S libraries
+  loadOff lipid.lib
+  loadOff fat.lib
+
