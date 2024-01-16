@@ -1,0 +1,34 @@
+# test input, created by automated python program
+
+units	 real
+atom_style	 full
+
+pair_style none
+
+bond_style harmonic
+
+boundary        p p p
+
+read_data       mytest.dat
+
+thermo_style custom step temp ebond epair pe ke etotal press
+thermo          100
+thermo_modify flush yes
+
+dump            1 all dcd 20 cg_test.dcd
+dump_modify     1 unwrap yes sort id
+dump mydmp all atom 10 dump.min.lammpstrj
+
+minimize 10.0 1.0e-4 1000 100000
+minimize 0.0 1.0e-8 1000 100000
+minimize 1e-12 1.0e-10 1000 10000
+
+timestep  1.0
+fix       cg_run2  all  nvt  temp 293.0 293.0 100.0
+run       100
+unfix     cg_run2
+
+timestep  5.0
+fix       cg_run2  all  nvt  temp 293.0 293.0 100.0
+run       150000
+unfix     cg_run2
